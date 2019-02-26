@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 引入验证插件
+import "./directives"
 
 Vue.config.productionTip = false
 

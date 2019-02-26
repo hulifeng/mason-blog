@@ -14,6 +14,7 @@
                 class="form-control"
                 placeholder="请填写用户名"
                 aria-describedby="basic-addon1"
+                v-validator:input.required="{ regex: /^[a-zA-Z]+\w*\s?\w*$/, error: '用户名要求以字母开头的单词字符' }"
               >
             </div>
           </div>
@@ -51,7 +52,12 @@
               <span class="input-group-addon" id="basic-addon1">
                 <i class="fa fa-fw fa-photo"></i>
               </span>
-              <input type="text" class="form-control" placeholder="请填写验证码" aria-describedby="basic-addon1">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="请填写验证码"
+                aria-describedby="basic-addon1"
+              >
             </div>
           </div>
           <div class="thumbnail" title="点击图片重新获取验证码">
@@ -61,7 +67,10 @@
             <i class="fa fa-btn fa-sign-in"></i> 注册
           </button>
           <div class="to_login">
-            <p class="text-center">已有账号？<a href="#">现在登录</a></p>
+            <p class="text-center">
+              已有账号？
+              <a href="#">现在登录</a>
+            </p>
           </div>
         </div>
       </div>
@@ -110,5 +119,15 @@ input {
 .btn-blog {
   background-color: #1ab394;
   color: #fff;
+}
+.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 </style>
