@@ -55,8 +55,10 @@ export default {
     return {
       copyright: `
        <div class="container">
-        <strong>Copyright</strong> © 2018 友叹-USIGH - All rights reserved - 冀ICP备18012344号
-        <div class="pull-right">
+        <div class="copyright-left">
+         <strong>Copyright</strong> © 2018-2019 友叹-USIGH - 冀ICP备18012344号
+        </div>
+        <div class="domain">
           <strong>www.usigh.com</strong>
         </div>
       </div>
@@ -139,36 +141,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: inline-block;
-  background-color: #fff;
-  strong {
-    font-weight: 700;
-  }
-  .footer-nav {
-    padding: 40px 0 20px 0;
-    dt {
-      margin-bottom: 30px;
-    }
-    dd {
-      margin: 5px 0;
-      color: #676a6c;
-      a {
-        text-decoration: none;
-        color: #676a6c;
-        &:hover {
-          color: #ccc;
-        }
-      }
-    }
-  }
-  .copyright {
-    padding: 3px 0;
-    line-height: 40px;
-    border-top: 1px solid #e7eaec;
-  }
-}
+
 </style>

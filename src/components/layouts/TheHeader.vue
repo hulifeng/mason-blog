@@ -15,10 +15,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand blog-logo" href="/">Laravel</a>
+          <router-link to="/" class="navbar-brand blog-logo">Laravel</router-link>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li
@@ -29,17 +28,11 @@
               <a :href="item.link" @click="changeNavIndex($index)">{{item.title}}</a>
             </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <TheEntry/>
+          <!-- 登录后展示 -->
+          <!-- <ul class="nav navbar-nav navbar-right">
             <li class="dropdown pull-right">
-              <!--登录时-->
-              <a
-                href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Mason
                 <span class="caret"></span>
               </a>
@@ -55,7 +48,7 @@
                 </li>
               </ul>
             </li>
-          </ul>
+          </ul>-->
         </div>
       </div>
     </nav>
@@ -63,6 +56,7 @@
 </template>
 
 <script>
+import TheEntry from "@/components/layouts/TheEntry";
 export default {
   data() {
     return {
@@ -103,6 +97,9 @@ export default {
     changeNavIndex(index) {
       this.activeIndex = index;
     }
+  },
+  components: {
+    TheEntry
   }
 };
 </script>
@@ -117,7 +114,7 @@ export default {
   .navbar-toggle {
     background-color: #1ab394;
     .icon-bar {
-        background-color: #fff;
+      background-color: #fff;
     }
   }
   .navbar-brand {
