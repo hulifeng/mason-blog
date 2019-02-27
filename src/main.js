@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 // 引入验证插件
 import "./directives"
+// 引入 Message 组件
+import "./components"
 
 Vue.config.productionTip = false
 

@@ -63,7 +63,6 @@ function getErrorElement(el) {
     return errorElement
 }
 
-
 export default {
     bind(el, binding, vnode) {
         const { value, arg, modifiers } = binding
